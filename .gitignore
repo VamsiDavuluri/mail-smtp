@@ -1,0 +1,10 @@
+# Dependencies
+node_modules/
+
+# Environment variables
+.env
+
+# Other common files to ignore (optional but recommended)
+/dist
+/build
+npm-debug.log

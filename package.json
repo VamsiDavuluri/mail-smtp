@@ -1,0 +1,18 @@
+{
+  "name": "smtp-order-notifications",
+  "version": "1.0.0",
+  "description": "SMTP email notification system for vendor orders with product API and order processing",
+  "main": "processOrders.js",
+  "scripts": {
+    "start": "node processOrders.js",
+    "api": "node api.js"
+  },
+  "author": "Vamsi Davuluri",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.6.7",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "nodemailer": "^6.9.8"
+  }
+}

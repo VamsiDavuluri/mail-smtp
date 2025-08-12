@@ -3,6 +3,7 @@
 const { sendOrderNotification } = require('./index');
 const vendors = require('./vendors.json');
 const axios = require('axios');
+const {sendOrderSMS} = require('./sms');
 
 // The URL of the API server you will have running locally.
 const API_BASE_URL = 'http://localhost:3001/products';
@@ -30,8 +31,8 @@ const incomingOrders = [
   },
     {
     orderId: 'ORD5535',
-    customerName: 'Bob Williams',
-    vendorId: 'vendor-000',
+    customerName: 'Vamsi',
+    vendorId: 'vendor-00',
     orderTimestamp: new Date(),
     items: [
       { sku: 'TSHIRT-RD-M', quantity: 1 }
@@ -96,6 +97,14 @@ const handleAllOrders = async (orders) => {
       products: fullProductDetails,
       orderLink: orderLink
     });
+    // Send SMS if vendor has a phone number
+if (vendor.phone) {
+  await sendOrderSMS(vendor.phone, {
+    vendorName: vendor.name,
+    orderId: order.orderId,
+    orderLink: orderLink
+  });
+}
   }
 
   console.log('✅ All order notifications have been processed.');

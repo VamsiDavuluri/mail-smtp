@@ -1,15 +1,17 @@
 {
   "vendor-001": {
     "name": "Zara",
-    "email": "vdavulur2@gitam.in"
+    "email": "vdavulur2@gitam.in",
+    "phone": "+916303727961"
   },
   "vendor-002": {
     "name": "Shiva Chandra Retail",
-    "email": "shivachandra9490@gmail.com"
+    "email": "shivachandra9490@gmail.com",
+    "phone": "+919959041832"
   },
   "vendor-003": {
-    "name": "Fashion Hub",
-    "email": "devavarapudevendramani@gmail.com"
+    "name": "Vip's",
+    "email": "vipasyanabhanu01@gmail.com"
   },
   "vendor-004": {
     "name": "Gourmet Foods",
